@@ -11,7 +11,7 @@
 - [Acknowledgments](#acknowledgments-👏)
 
 ## Introduction 🌟
-**LlamaIndex** is a cutting-edge data retrieval and analysis tool designed for the efficient processing and querying of large text datasets. Utilizing advanced machine learning models and database technologies, it is an ideal solution for researchers and data scientists seeking to derive insights from complex data.
+**LlamaIndex** is a data retrieval and analysis tool designed for the efficient processing and querying of large text datasets. Utilizing advanced machine learning models and database technologies, it is an ideal solution for researchers and data scientists seeking to derive insights from complex data.
 
 ## Features 🚀
 - **Robust Data Processing 🔄**: Efficient document loading and parsing with `PyMuPDFReader`, and optimized data handling using `SentenceSplitter`.

@@ -1,16 +1,6 @@
 # LlamaIndex: Advanced Opensource Data Retrieval and Analysis 📘
 
-## Table of Contents
-- [Introduction](#introduction-🌟)
-- [Features](#features-🚀)
-- [Installation](#installation-🔧)
-- [Usage Guide](#usage-guide-📊)
-- [Configuration Settings](#configuration-settings-⚙️)
-- [Troubleshooting](#troubleshooting-🛠️)
-- [License](#license-📜)
-- [Acknowledgments](#acknowledgments-👏)
-
-## Introduction 🌟
+## Intro 🌟
 **LlamaIndex** is a data retrieval and analysis tool designed for the efficient processing and querying of large text datasets. Utilizing advanced machine learning models and database technologies, it is an ideal solution for researchers and data scientists seeking to derive insights from complex data.
 
 ## Features 🚀

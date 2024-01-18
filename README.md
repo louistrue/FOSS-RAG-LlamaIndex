@@ -1,4 +1,4 @@
-# LlamaIndex: Advanced Data Retrieval and Analysis 📘
+# LlamaIndex: Advanced Opensource Data Retrieval and Analysis 📘
 
 ## Table of Contents
 - [Introduction](#introduction-🌟)

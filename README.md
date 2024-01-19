@@ -1,5 +1,10 @@
 # LlamaIndex: Advanced Opensource Data Retrieval and Analysis 📘
 
+## Acknowledgments 👏
+first seen [here at LlamaIndex](https://docs.llamaindex.ai/en/stable/examples/low_level/oss_ingestion_retrieval.html) 😍.
+
+Special thanks to the teams behind `LlamaIndex` components, `HuggingFace` for embedding models, `PyMuPDF` for document parsing, and `PostgreSQL` for database management.
+
 ## Table of Contents
 - [Introduction 🌟](#introduction-)
 - [Features 🚀](#features-)
@@ -26,7 +31,7 @@
 - [Videos ▶️](#videos-)
 
 ## Introduction 🌟
-**LlamaIndex** is a data retrieval and analysis tool designed for processing and querying large text datasets. It leverages advanced machine learning models and database technologies.
+**LlamaIndex** is a data retrieval and analysis tool to for process and query large text datasets with advanced machine learning models and database technologies using RAG (Retrieval-Augmented Generation).
 
 ## Features 🚀
 - **Data Processing 🔄**: Efficient document loading with `PyMuPDFReader`, and optimized data handling using `SentenceSplitter`.

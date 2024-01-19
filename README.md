@@ -125,7 +125,7 @@ Retrieval-Augmented Generation (RAG) in LlamaIndex enhances data retrieval with 
 - [Routers by LlamaIndex](https://docs.llamaindex.ai/en/stable/module_guides/querying/router/root.html)
 
 ## Videos ▶️
-- [Jerry Liu–LlamaIndex – Practical Data Considerations for building Production-Ready LLM Applications](https://www.youtube.com/watch?v=example2](https://youtu.be/g-VvYLhYhOg?si=oHzKibrdste4XQWF)
+- [Jerry Liu–LlamaIndex – Practical Data Considerations for building Production-Ready LLM Applications](https://youtu.be/g-VvYLhYhOg?si=oHzKibrdste4XQWF)
 - [Building Production-Ready RAG Applications: Jerry Liu](https://youtu.be/TRjq7t2Ms5I?si=eZYRhZVE1eJSl8Ve)
 - [High-performance RAG with LlamaIndex](https://www.youtube.com/live/wBhY-7B2jdY?si=7AxHoos8vbPVpvOe)
 - [Lessons Learned on LLM RAG Solutions](https://www.youtube.com/live/Y9qn4XGH1TI?si=h51EGDBvWYFZyxvu)

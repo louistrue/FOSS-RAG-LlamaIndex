@@ -26,11 +26,11 @@ embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 # LlamaCPP Model
 llm = LlamaCPP(
     model_path=MODEL_PATH,
-    temperature=0.1,
+    temperature=0.12,
     max_new_tokens=256,
-    context_window=3900,
+    context_window=5000,
     generate_kwargs={},
-    model_kwargs={"n_gpu_layers": 4},
+    model_kwargs={"n_gpu_layers": 41},
     verbose=True,
 )
 
@@ -105,7 +105,10 @@ for node in nodes:
 vector_store.add(nodes)
 
 # Query processing
-query_str = "Give one key element for Wheelchair-accessible construction."
+#query_str = "Give one key element for Wheelchair-accessible construction."
+#query_str = "What does SIA 118 say about Angebot des Unternehmers"
+query_str = "What does SIA 118 say on the subject of Subunternehmer and Nebenunternehmer?"
+
 query_embedding = embed_model.get_query_embedding(query_str)
 vector_store_query = VectorStoreQuery(
     query_embedding=query_embedding, similarity_top_k=2, mode="default"

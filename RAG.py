@@ -1,8 +1,7 @@
 import os
-from pathlib import Path
 import psycopg2
-from sqlalchemy import make_url
 from typing import Any, List, Optional
+import fitz  # PyMuPDF
 
 from llama_index.embeddings import HuggingFaceEmbedding
 from llama_index.llms import LlamaCPP
@@ -12,10 +11,9 @@ from llama_index.node_parser.text import SentenceSplitter
 from llama_index.schema import TextNode, NodeWithScore
 from llama_index.retrievers import BaseRetriever
 from llama_index.query_engine import RetrieverQueryEngine
-from llama_hub.file.pymu_pdf.base import PyMuPDFReader
-
 from dotenv import load_dotenv
-load_dotenv()  
+
+load_dotenv()
 
 # Loading environment variables
 MODEL_PATH = os.getenv('LLAMA_MODEL_PATH')
@@ -24,18 +22,15 @@ DB_PASSWORD = os.getenv('DB_PASSWORD')
 
 # Embedding model
 embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
-#embed_model = HuggingFaceEmbedding(model_name="dbmdz/bert-base-german-cased")
-#embed_model = HuggingFaceEmbedding(model_name="timpal0l/mdeberta-v3-base-squad2")
 
-
-# LlamaCPP Model (em_german_leo_mistral.Q5_K_M.gguf)
+# LlamaCPP Model
 llm = LlamaCPP(
     model_path=MODEL_PATH,
-    temperature=0.15,
-    max_new_tokens=1000,
-    context_window=8000,
+    temperature=0.1,
+    max_new_tokens=256,
+    context_window=3900,
     generate_kwargs={},
-    model_kwargs={"n_gpu_layers": 33},
+    model_kwargs={"n_gpu_layers": 4},
     verbose=True,
 )
 
@@ -63,26 +58,44 @@ vector_store = PGVectorStore.from_params(
     user=user,
     table_name="llama2_paper",
     embed_dim=384
-    #embed_dim=768,
 )
 
-# Document loading and parsing
-loader = PyMuPDFReader()
-documents = loader.load(file_path=DOCUMENT_PATH)
+# Document loading and parsing modified to handle directory input
+def process_pdf_file(file_path):
+    try:
+        document = fitz.open(file_path)
+        text = ""
+        for page in document:
+            text += page.get_text("text")
+        return text
+    except fitz.FileDataError as e:
+        print(f"Error loading file {file_path}: {e}")
+        return None
 
-text_parser = SentenceSplitter(chunk_size=2000) #512
+documents_texts = []
+for root, dirs, files in os.walk(DOCUMENT_PATH):
+    for file in files:
+        if file.endswith(".pdf"):  # Adjust the condition based on your document types
+            file_path = os.path.join(root, file)
+            doc_text = process_pdf_file(file_path)
+            if doc_text:
+                documents_texts.append(doc_text)
+
+# Continue with the existing logic for text chunks processing
+text_parser = SentenceSplitter(chunk_size=1024)
 text_chunks = []
 doc_idxs = []
-for doc_idx, doc in enumerate(documents):
-    cur_text_chunks = text_parser.split_text(doc.text)
+
+for doc_idx, doc_text in enumerate(documents_texts):
+    cur_text_chunks = text_parser.split_text(doc_text)
     text_chunks.extend(cur_text_chunks)
     doc_idxs.extend([doc_idx] * len(cur_text_chunks))
 
 nodes = []
 for idx, text_chunk in enumerate(text_chunks):
     node = TextNode(text=text_chunk)
-    src_doc = documents[doc_idxs[idx]]
-    node.metadata = src_doc.metadata
+    # Assuming metadata needs to be populated differently as original document objects are not used
+    # node.metadata = src_doc.metadata
     nodes.append(node)
 
 for node in nodes:
@@ -92,12 +105,7 @@ for node in nodes:
 vector_store.add(nodes)
 
 # Query processing
-#query_str = "Erklaere detailliert die Grundlagen zu Tragsicherheit"
-#query_str = "Definiere: Universal-Keilzinkenverbindung"
-#query_str = "What is Balkenschichtholz?"
-query_str = "Please explain the concept of Robustheit/robustness"
-#query_str = "Please explain the concept of Holzfeuchte/moisture content in detail"
-
+query_str = "Give one key element for Wheelchair-accessible construction."
 query_embedding = embed_model.get_query_embedding(query_str)
 vector_store_query = VectorStoreQuery(
     query_embedding=query_embedding, similarity_top_k=2, mode="default"
@@ -106,8 +114,7 @@ query_result = vector_store.query(vector_store_query)
 
 print(query_result.nodes[0].get_content())
 
-
-# Retriever implementation
+# Retriever implementation remains the same
 class VectorDBRetriever(BaseRetriever):
     def __init__(self, vector_store: PGVectorStore, embed_model: Any, query_mode: str = "default", similarity_top_k: int = 2) -> None:
         self._vector_store = vector_store

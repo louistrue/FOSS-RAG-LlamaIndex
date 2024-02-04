@@ -26,11 +26,11 @@ embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 # LlamaCPP Model
 llm = LlamaCPP(
     model_path=MODEL_PATH,
-    temperature=0.12,
+    temperature=0.1,
     max_new_tokens=256,
-    context_window=5000,
+    context_window=3900,
     generate_kwargs={},
-    model_kwargs={"n_gpu_layers": 41},
+    model_kwargs={"n_gpu_layers": 33},
     verbose=True,
 )
 

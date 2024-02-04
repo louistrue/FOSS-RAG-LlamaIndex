@@ -1,0 +1,114 @@
+SIA Norms from subfolder:
+
+1. **102_2020_d.pdf**
+   - **German Title:** SIA 102:2020 Bauwesen
+   - **Summary:** Ersetzt SIA 102:2014, SIA 102-K:2018. Ordnung für Leistungen und Honorare der Architektinnen und Architekten.
+
+2. **112_2014_d.pdf**
+   - **German Title:** SIA 112:2014 Bauwesen
+   - **Summary:** Modell Bauplanung Verständigungsnorm.
+
+3. **118-271_2021_d.pdf**
+   - **German Title:** SIA 118/271:2021 Bauwesen
+   - **Summary:** Ersetzt SIA V118/271:2007. Conditions générales relatives aux étanchéités des bâtiments. Allgemeine Bedingungen für Abdichtungen von Hochbauten.
+
+4. **118-343_2010_d.pdf**
+   - **German Title:** SIA 118/343:2010 Bauwesen
+   - **Summary:** Ersetzt den organisatorischen Teil der Norm SIA 343, Ausgabe 1990. Allgemeine Bedingungen für Türen und Tore.
+
+5. **118_2013_d.pdf**
+   - **German Title:** SIA 118:2013 Bauwesen
+   - **Summary:** Ersetzt die Norm SIA 118:1977/91. Allgemeine Bedingungen für Bauarbeiten.
+
+6. **181_2020_d.pdf**
+   - **German Title:** SIA 181:2020 Bauwesen
+   - **Summary:** Ersetzt SIA 181:2006. Schallschutz im Hochbau.
+
+7. **271_2021_d.pdf**
+   - **German Title:** SIA 271:2021 Bauwesen
+   - **Summary:** Ersetzt SIA 271:2007. Abdichtungen von Hochbauten.
+
+8. **343_2014_d.pdf**
+   - **German Title:** SIA 343:2014 Bauwesen
+   - **Summary:** Ersetzt Norm SIA 343:2010. Türen und Tore.
+
+9. **500_2009_d.pdf**
+   - **German Title:** SIA 500:2009 Bauwesen
+   - **Summary:** Ersetzt die Norm SN 521500, Ausgabe 1988. Hindernisfreie Bauten.
+
+10. **prSIA343-1_Vernehmlassungsentwurf.pdf**
+    - **German Title:** prSIA 343/1:2023-02 Bauwesen
+    - **Summary:** Vorgesehen als Ersatz für SIA 343: 2014. Türen für Personen.
+
+Main folder content:
+
+1. **015_1 Anhang 1 autom. Drehflügeltüren**
+   - **German Title:** Seite 1
+   - **Summary:** Umsetzung der Anforderungen aus der Maschinenrichtlinie. Praxisanwendung bei Türen Nr.015.
+
+2. **015_2 Anhang 2 autom. Schiebetüren**
+   - **German Title:** (Not provided)
+   - **Summary:** Umsetzung der Anforderungen aus der Maschinenrichtlinie. Praxisanwendung bei Türen Nr.015/1. Einleitung.
+
+3. **016 Leistungserklärung**
+   - **German Title:** Seite 1
+   - **Summary:** Umsetzung der Anforderungen zur Leistungserklärung. Praxisanwendung Nr.016.
+
+4. **016_1 Anhang 1 Leistungserklärung Aussentüren**
+   - **German Title:** (Not provided)
+   - **Summary:** Umsetzung der Anforderungen zur Leistungserklärung. Praxisanwendung Nr.016/1. Einleitung.
+
+5. **016_2 Anhang 2 Leistungserklärung Brandschutz**
+   - **German Title:** (Not provided)
+   - **Summary:** Umsetzung der Anforderungen zur Leistungserklärung. Praxisanwendung Nr.016/2. Einleitung.
+
+#### SIA Standards and Guidelines
+
+6. **118-343_2010_d.pdf**
+   - **German Title:** Lizenz 905.100: Burckhardt + Partner AG, Basel
+   - **Summary:** SIA 118/343:2010 Bauwesen. Ersetzt den organisatorischen Teil der Norm SIA 343, Ausgabe 1990.
+
+7. **20178 1 67072_D_Original_de_20178.pdf.pdf**
+   - **German Title:** Türen und Tore
+   - **Summary:** Checkliste für die Sicherheitsrisiken von Türen und Toren. Die Hauptgefahren werden detailliert beschrieben.
+
+#### Federal Department of Economic Affairs, Education and Research (WBF) Guidelines
+
+8. **Aenderungen_Wegleitung_V3_4_Internet_Gesamtliste_de.pdf**
+   - **German Title:** 31.07.2023 1 / 17 Eidgenössisches Departement für
+   - **Summary:** Wegleitung zu den Verordnungen 3 und 4 zum Arbeitsgesetz: Liste der Änderungen. Hervorhebung der zentralen Grundsätze.
+
+#### CRB Standards for Construction
+
+9. **Anwendung_102D15.pdf**
+   - **German Title:** Standards für das Bauwesen
+   - **Summary:** CRB VSS D/15 NPK 102. Besondere Bestimmungen und Anwendungshinweise.
+
+10. **Anwendung_622D18.pdf**
+    - **German Title:** Standards für das Bauwesen
+    - **Summary:** CRB VSS D/2018 NPK 622. Türen Normpositionen-Katalog und wichtige Hinweise.
+
+#### Swiss Fire Protection Association Guidelines
+
+11. **BSPUB-1394520214-101.pdf through BSPUB-1394520214-193.pdf**
+    - **German Title:** (Varies, some are not provided)
+    - **Summary:** (Varies) Guidelines and directives related to fire protection and safety, including specific instructions and classifications.
+
+#### Technical Leaflets for the Swiss Door Industry
+
+12. **Merkblatt_001_d.pdf through Merkblatt_019_d.pdf**
+    - **German Title:** (Varies, starting with "Seite 1" for some)
+    - **Summary:** (Varies) Technical specifications, guidelines, and standards for doors, including requirements for fireproof, soundproof, and security doors.
+
+#### Regulation for Fireproof Doors
+
+13. **Reglement_Brandschutztueren_d.pdf**
+    - **German Title:** Inhaltsverzeichnis
+    - **Summary:** Regulation and guidelines for certified fireproof door constructions. Includes definitions, performance characteristics, and compliance requirements.
+
+#### Guidelines for Barrier-Free, Adaptable Housing Construction
+
+14. **Richtlinie_Wohnungsbau-hindernisfrei-anpassbar_2023.pdf**
+    - **German Title:** Situation Obergeschoss 1 : 10050 m 0 10
+    - **Summary:** Guidelines for the design of housing adaptable to all life situations, focusing on barrier-free architecture.
+

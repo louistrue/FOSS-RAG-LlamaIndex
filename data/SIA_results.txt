@@ -1,0 +1,956 @@
+PS C:\Users\LouisTrümpler\Documents\GitHub> & C:/Users/LouisTrümpler/AppData/Local/Programs/Python/Python310/python.exe c:/Users/LouisTrümpler/Documents/GitHub/LlamaIndex_RAG/RAG.py
+llama_model_loader: loaded meta data with 19 key-value pairs and 363 tensors from C:\Program Files\LlamaIndexModels\llama-2-13b-chat.Q4_0.gguf (version GGUF V2)
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 5120
+llama_model_loader: - kv   4:                          llama.block_count u32              = 40
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 13824
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 40
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 40
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 2
+llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  12:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  13:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  15:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  16:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  17:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  18:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   81 tensors
+llama_model_loader: - type q4_0:  281 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V2
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 4096
+llm_load_print_meta: n_embd           = 5120
+llm_load_print_meta: n_head           = 40
+llm_load_print_meta: n_head_kv        = 40
+llm_load_print_meta: n_layer          = 40
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 5120
+llm_load_print_meta: n_embd_v_gqa     = 5120
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 13824
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 4096
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 13B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 13.02 B
+llm_load_print_meta: model size       = 6.86 GiB (4.53 BPW)
+llm_load_print_meta: general.name     = LLaMA v2
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size =    0.14 MiB
+llm_load_tensors: offloading 4 repeating layers to GPU
+llm_load_tensors: offloaded 4/41 layers to GPU
+llm_load_tensors:        CPU buffer size =  7023.90 MiB
+...................................................................................................
+llama_new_context_with_model: n_ctx      = 3900
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:        CPU KV buffer size =  3046.88 MiB
+llama_new_context_with_model: KV self size  = 3046.88 MiB, K (f16): 1523.44 MiB, V (f16): 1523.44 MiB
+llama_new_context_with_model: graph splits (measure): 1
+llama_new_context_with_model:        CPU compute buffer size =   342.31 MiB
+AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 0 | VSX = 0 |
+4 
+Leistungsbeschrieb
+15
+
+
+4.1
+Strategische Planung
+16
+
+
+4.2
+Vorstudien
+17
+
+
+4.3
+Projektierung
+20
+
+
+4.4
+Ausschreibung
+25
+
+
+4.5
+Realisierung
+27
+
+
+4.6
+Bewirtschaftung
+32
+Workingcopy for AEC Hackathon - Zurich Edition
+
+SIA 102, Copyright © 2020 by SIA Zurich
+3
+
+
+
+
+Seite
+
+Art. 5
+Grundsätze der Vergütung von Architektenleistungen
+36
+
+
+5.1
+Teile der Vergütung
+36
+
+
+5.2
+Änderung der vereinbarten Leistung
+36
+
+
+5.3
+Honorierungsarten
+36
+
+
+5.4
+Zusätzliche Kostenelemente
+36
+
+
+5.5
+Vergütung von Reisezeiten
+36
+
+
+5.6
+Vergütung von gesetzlichen Zuschlägen
+37
+
+
+5.7
+Teuerung
+37
+
+
+5.8
+Fehlende Vereinbarung
+37
+
+
+5.9
+Planergemeinschaft
+37
+
+
+5.10
+Generalplanerfunktion
+37
+
+
+5.11
+Subplaner
+37
+
+Art. 6
+Honorarberechnung nach dem effektiven Zeitaufwand
+38
+
+
+6.1
+Grundsätze
+38
+
+
+6.2
+Honorarberechnung nach Qualifikationskategorien
+38
+
+
+6.3
+Honorarberechnung nach mittleren Stundenansätzen
+39
+
+
+6.4
+Honorarberechnung nach Gehältern
+40
+
+
+6.5
+Richtpreis
+40
+Workingcopy for AEC Hackathon - Zurich Edition
+Workingcopy for AEC Hackathon - Zurich Edition
+
+SIA 102, Copyright © 2020 by SIA Zurich
+5
+
+Einleitung
+
+
+Im vorliegenden Text ist der Übersichtlichkeit halber für Funktionsbezeichnungen immer die männliche
+Form gewählt. Die Aussagen gelten in gleicher Form auch für Funktionsträgerinnen.
+Inhalt der
+.1
+Die vorliegende Ordnung
+Ordnung
+
+–  umschreibt die Rechte und Pflichten der Parteien beim Abschluss und bei der Abwicklung von
+ Verträgen über Architekturleistungen (Art. 1),
+
+
+– erläutert die Aufgaben und Stellung des Architekten (Art. 2),
+
+
+– beschreibt die Leistungen des Architekten und des Auftraggebers (Art. 3 und 4),
+
+
+– enthält die Grundlagen zur Ermittlung einer angemessenen Honorierung (Art. 5 und 6).
+
+.2
+Für die Regelung der vertraglichen Beziehungen zwischen dem Auftraggeber und dem Architekten
+ stehen die Vertragsformulare SIA 1001/1 und SIA 1001/2 zur Verfügung. Das Vertragsformular
+SIA 1001/3 dient als Subplanervertrag.
+Anwendungs-
+.1
+Für normal anspruchsvolle Aufgaben steht die Einzelbeauftragung des Architekten und der ver-
+bereich
+
+schiedenen Fachplaner im Vordergrund.
+
+.2
+Bei Aufgaben, die als Generalplanerauftrag oder in einer Planergemeinschaft abge wickelt werden,
+dient die vorliegende Ordnung auch dazu, innerhalb des Planerteams die Leistungen und Honorare
+des  Architekten zu regeln.
+Auslegung
+.1
+Meinungsverschiedenheiten über Leistungsumfang und Honorierung können der Kommission SIA 102
+der Ordnung
+
+für die Leistungen und Honorare der Architekten unterbreitet  werden.
+
+.2
+Die in dieser Ordnung enthaltenen Leistungsbeschriebe und Grundsätze der Vergütung sind nicht
+ verbindlich und gelten für die Vertragsparteien nur, wenn sie im Vertrag vereinbart sind.
+Verhältnis zur
+
+Die Norm SIA 112 Modell – Bauplanung bildet den Ablauf der Planung und Realisierung phasen -
+Norm SIA 112
+
+bezogen mit verteilten Rollen und frei wählbaren Modulen ab.
+
+llama_print_timings:        load time =   67237.62 ms
+llama_print_timings:      sample time =      11.90 ms /    53 runs   (    0.22 ms per token,  4454.16 tokens per second)
+llama_print_timings: prompt eval time =  138170.86 ms /  1294 tokens (  106.78 ms per token,     9.37 tokens per second)
+llama_print_timings:        eval time =   13603.16 ms /    52 runs   (  261.60 ms per token,     3.82 tokens per second)
+llama_print_timings:       total time =  151943.33 ms /  1346 tokens
+
+One key element of wheelchair-accessible construction is the provision of an accessible route within the building or structure, which includes ramps, elevators, and clear floor space at doors and intersections to allow easy movement for people with disabilities.
+PS C:\Users\LouisTrümpler\Documents\GitHub> & C:/Users/LouisTrümpler/AppData/Local/Programs/Python/Python310/python.exe c:/Users/LouisTrümpler/Documents/GitHub/LlamaIndex_RAG/RAG.py
+llama_model_loader: loaded meta data with 19 key-value pairs and 363 tensors from C:\Program Files\LlamaIndexModels\llama-2-13b-chat.Q4_0.gguf (version GGUF V2)
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 5120
+llama_model_loader: - kv   4:                          llama.block_count u32              = 40
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 13824
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 40
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 40
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 2
+llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  12:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  13:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  15:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  16:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  17:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  18:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   81 tensors
+llama_model_loader: - type q4_0:  281 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V2
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 4096
+llm_load_print_meta: n_embd           = 5120
+llm_load_print_meta: n_head           = 40
+llm_load_print_meta: n_head_kv        = 40
+llm_load_print_meta: n_layer          = 40
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 5120
+llm_load_print_meta: n_embd_v_gqa     = 5120
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 13824
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 4096
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 13B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 13.02 B
+llm_load_print_meta: model size       = 6.86 GiB (4.53 BPW) 
+llm_load_print_meta: general.name     = LLaMA v2
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size =    0.14 MiB
+llm_load_tensors: offloading 40 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 41/41 layers to GPU
+llm_load_tensors:        CPU buffer size =  7023.90 MiB
+...................................................................................................
+llama_new_context_with_model: n_ctx      = 3900
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:        CPU KV buffer size =  3046.88 MiB
+llama_new_context_with_model: KV self size  = 3046.88 MiB, K (f16): 1523.44 MiB, V (f16): 1523.44 MiB
+llama_new_context_with_model: graph splits (measure): 1
+llama_new_context_with_model:        CPU compute buffer size =   342.31 MiB
+AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 0 | VSX = 0 |
+1.2.2
+Beilagen zum Angebot
+In Beilagen zum Angebot sind anzugeben:
+–   Im Leistungsverzeichnis verlangte Nachweise für den Vergleich der Angebote.
+1.2.3
+Unternehmervarianten
+1.2.3.1
+Unternehmervarianten enthalten alle Unterlagen, die zur technischen und finanziellen Beurteilung
+erforderlich sind.
+1.2.3.2
+Der Bauherr darf eingereichte Unternehmervarianten nicht im gleichen Ausschreibungsverfahren
+durch Konkurrenten offerieren lassen.
+1.2.3.3
+Unternehmervarianten nicht berücksichtigter Anbieter sind deren Eigentum. Der Bauherr darf diese
+weiterverwenden, sofern die Anbieter ausdrücklich damit einverstanden sind.
+8
+SIA 118/343, Copyright © 2010 by SIA Zurich
+Workingcopy for AEC Hackathon - Zurich Edition
+1.3
+Pflichten der Vertragspartner
+1.3.1
+Bauherr
+Zu den Pflichten des Bauherrn gehören:
+–   Bereitstellen des Sicherheitskonzepts,
+–   Abgabe von Detailplänen und der angrenzenden Bauteile sowie Anweisungen bei besonderen
+Arbeitsausführungen,
+–   Erstellen der Türliste und/oder Torliste inkl. Türnummerierung in der Liste und in den Plänen
+ sowie den Funktionsbeschrieben (Tür-/Torengineering),
+–   Angabe und Definition der Schnittstellen sowie die zu verwendenden Installationskabel und
+ notwendigen Leitungsquerschnitte,
+–   vor der Montage Festlegen und Markieren der Meterrisse bei jeder Tür- oder Toröffnung,
+–   Überwachung und Einhaltung der maximalen Feuchtigkeit auf der Baustelle,
+–   Bereitstellen von Füllmörtel zur Stahlzargenmontage gemäss den Angaben des Unternehmers
+bauseits auf dem entsprechenden Stockwerk,
+–   Schützen der eingebauten Bauteile nach der Abnahme.
+1.3.2
+Unternehmer
+Zu den Pflichten des Unternehmers gehören:
+–   Lieferung der Nachweise, welche im Leistungsverzeichnis verlangt bzw. im Werkvertrag auf -
+geführt sind,
+–   Ergänzen und Revision der Tür-/Torliste und Übergabe derselben an den Bauherrn bei der Ab-
+nahme,
+–   Übergabe an den Bauherrn bei der Abnahme des objektbezogenen Handbuchs und Prüfbuchs
+für automatische Türen oder Tore,
+–   Prüfen der Rohbaumasse,
+–   Abklären der Kranbenutzung und der allfälligen Kosten,
+–   Überprüfung des Untergrunds oder bauseits versetzter Zargen auf Ebenheit und Lot. Abweichun-
+gen sind vor der Montage dem Bauherrn mitzuteilen (siehe Norm SIA 343),
+–   Abgabe von Unterlagen und Informationen zuhanden der Bauherrschaft über notwendige Über-
+wachungs-, Wartungs- und Instandhaltungsmassnahmen,
+–   Verantwortung für sämtliche Verbindungsleitungen zwischen der Schnittstelle und der Tür bzw.
+Tor.
+9
+SIA 118/343, Copyright © 2010 by SIA Zurich
+Workingcopy for AEC Hackathon - Zurich Edition
+2
+VERGÜTUNGSREGELUNGEN
+2.1
+Allgemeines
+Die Ausführung nicht inbegriffener Leistungen ist dem Bauherrn anzuzeigen.
+2.2
+Inbegriffene Leistungen
+Die folgenden Leistungen gehören zu einer fachgerechten Ausführung und sind deshalb auch ohne
+spezielle Beschreibung in den Einheitspreisen inbegriffen.
+–   Bemusterung von Halb- und Fertigfabrikaten (Beschläge usw.), sofern nicht Spezialanfertigungen
+erforderlich sind.
+
+llama_print_timings:        load time =   44476.03 ms
+llama_print_timings:      sample time =      35.11 ms /   144 runs   (    0.24 ms per token,  4101.05 tokens per second)
+llama_print_timings: prompt eval time =   95348.32 ms /  1060 tokens (   89.95 ms per token,    11.12 tokens per second)
+llama_print_timings:        eval time =   38867.18 ms /   143 runs   (  271.80 ms per token,     3.68 tokens per second)
+llama_print_timings:       total time =  134707.21 ms /  1203 tokens
+ Based on the given text from SIA 118/343, there is no direct mention of "Angebot des Unternehmers" in the provided context information. However, it can be inferred that the offer or proposal of the entrepreneur is included in the scope of work for the contractor, as mentioned in section 1.2.3.1, which states that "Unternehmervarianten enthalten alle Unterlagen, die zur technischen und finanziellen Beurteilung erforderlich sind." This suggests that the entrepreneur's offer or proposal should include all necessary technical and financial information for the contractor to evaluate and decide on the project.
+PS C:\Users\LouisTrümpler\Documents\GitHub> & C:/Users/LouisTrümpler/AppData/Local/Programs/Python/Python310/python.exe c:/Users/LouisTrümpler/Documents/GitHub/LlamaIndex_RAG/RAG.py
+llama_model_loader: loaded meta data with 19 key-value pairs and 363 tensors from C:\Program Files\LlamaIndexModels\llama-2-13b-chat.Q4_0.gguf (version GGUF V2)
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 5120
+llama_model_loader: - kv   4:                          llama.block_count u32              = 40
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 13824
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 40
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 40
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 2
+llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  12:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  13:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  15:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  16:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  17:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  18:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   81 tensors
+llama_model_loader: - type q4_0:  281 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V2
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 4096
+llm_load_print_meta: n_embd           = 5120
+llm_load_print_meta: n_head           = 40
+llm_load_print_meta: n_head_kv        = 40
+llm_load_print_meta: n_layer          = 40
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 5120
+llm_load_print_meta: n_embd_v_gqa     = 5120
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 13824
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 4096
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 13B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 13.02 B
+llm_load_print_meta: model size       = 6.86 GiB (4.53 BPW)
+llm_load_print_meta: general.name     = LLaMA v2
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size =    0.14 MiB
+llm_load_tensors: offloading 40 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 41/41 layers to GPU
+llm_load_tensors:        CPU buffer size =  7023.90 MiB
+...................................................................................................
+llama_new_context_with_model: n_ctx      = 5000
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:        CPU KV buffer size =  3906.25 MiB
+llama_new_context_with_model: KV self size  = 3906.25 MiB, K (f16): 1953.12 MiB, V (f16): 1953.12 MiB
+llama_new_context_with_model: graph splits (measure): 1
+llama_new_context_with_model:        CPU compute buffer size =   430.39 MiB
+AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 0 | VSX = 0 |
+3.5 
+Weitere Normen
+
+SN EN ISO 3382-2
+ Akustik – Messung von Parametern der Raumakustik –
+Teil 2: Nachhallzeit in gewöhnlichen Räumen
+Workingcopy for AEC Hackathon - Zurich Edition
+36
+SIA 181, Copyright © 2020 by SIA Zurich
+Anhang C (informativ)
+Verzeichnis der Begriffe
+Tabelle 9 Alphabetisches Verzeichnis der in Kapitel 1 definierten Begriffe
+Deutsch
+Französisch
+Italienisch
+Ziffer
+A-bewerteter Standard-
+Schalldruckpegel
+Niveau normalisé pondéré A
+du bruit continu
+Livello di pressione sonora
+normalizzato ponderato A
+1.1.4.8
+Äquivalente Absorptions-
+fläche
+Aire d’absorption équivalente
+Superficie assorbente
+equivalente
+1.1.1.23
+Bauakustik
+Acoustique du bâtiment
+Acustica edile
+1.1.1.5
+Bau-Schalldämm-Mass
+Indice d’affaiblissement
+acoustique apparent
+Indice di fonoisolamento
+in opera
+1.1.2.9
+Bau-Schalldämm-Mass
+für Aussenbauteile
+Indice d’affaiblissement
+acoustique apparent des
+éléments de façade
+Indice di fonoisolamento
+in opera per elementi esterni
+1.1.2.11
+Benutzungsgeräusch
+Bruit provoqué par
+l’utilisateur
+Rumore causato dall’utente
+1.1.4.3
+Beurteilungspegel
+Niveau d’évaluation
+Livello di valutazione
+1.1.1.20
+Bewertete Standard-
+Schallpegeldifferenz
+Isolement acoustique
+normalisé pondéré
+Fonoisolamento ponderato
+normalizzato
+1.1.2.15
+Bewertete Standard-
+Schallpegeldifferenz
+für die Gebäudehülle
+Isolement acoustique
+normalisé pondéré pour
+l’enveloppe du bâtiment
+Fonoisolamento ponderato
+normalizzato per l’involucro
+dell’edificio
+1.1.2.17
+1.1.2.19
+Bewerteter Norm-Trittschall-
+pegel
+Niveau de pression pondéré
+du bruit de choc normalisé
+Livello sonoro normalizzato
+ponderato per calpestio
+1.1.3.9
+Bewerteter Standard-
+Trittschallpegel
+Niveau de pression pondéré
+du bruit de choc standardisé
+Livello sonoro standardizzato
+ponderato per calpestio
+1.1.3.11
+Bewertetes Bau-Schalldämm-
+Mass
+Indice d’affaiblissement
+acoustique apparent pondéré
+Indice di fonoisolamento
+in opera ponderato
+1.1.2.10
+Bewertetes Bau-Schalldämm-
+Mass für Aussenbauteile
+Indice d’affaiblissement
+acoustique apparent pondéré
+des éléments de façade
+Indice di fonoisolamento
+in opera ponderato per
+elementi esterni
+1.1.2.12
+Bewertetes Schalldämm-
+Mass
+Indice d’affaiblissement
+acoustique pondéré
+Indice di fonoisolamento
+ponderato
+1.1.2.8
+Bezugs-Absorptionsfläche
+Aire d’absorption équivalente
+de référence
+Superficie assorbente
+di riferimento
+1.1.1.24
+Bezugsnachhallzeit
+Temps de réverbération
+de référence
+Tempo di riverbero
+di riferimento
+1.1.1.22
+Bezugswert für Luftschall
+Pression acoustique
+de référence
+Valore di riferimento per
+il rumore per via aerea
+1.1.1.12
+Dauergeräusch
+Bruit continu
+Rumore continuo
+1.1.4.5
+Direktübertragung
+bei Luftschall
+Transmission directe du bruit
+aérien
+Trasmissione diretta
+del rumore per via aerea
+1.1.2.
+
+llama_print_timings:        load time =   44157.29 ms
+llama_print_timings:      sample time =       3.13 ms /    22 runs   (    0.14 ms per token,  7026.51 tokens per second)
+llama_print_timings: prompt eval time =  106200.70 ms /  1184 tokens (   89.70 ms per token,    11.15 tokens per second)
+llama_print_timings:        eval time =    5006.13 ms /    21 runs   (  238.39 ms per token,     4.19 tokens per second)
+llama_print_timings:       total time =  111252.20 ms /  1205 tokens
+
+You can find information on sound insulation in SN EN ISO 3382-2.
+PS C:\Users\LouisTrümpler\Documents\GitHub> & C:/Users/LouisTrümpler/AppData/Local/Programs/Python/Python310/python.exe c:/Users/LouisTrümpler/Documents/GitHub/LlamaIndex_RAG/RAG.py
+llama_model_loader: loaded meta data with 19 key-value pairs and 363 tensors from C:\Program Files\LlamaIndexModels\llama-2-13b-chat.Q4_0.gguf (version GGUF V2)
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 5120
+llama_model_loader: - kv   4:                          llama.block_count u32              = 40
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 13824
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 40
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 40
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 2
+llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  12:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  13:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  15:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  16:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  17:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  18:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   81 tensors
+llama_model_loader: - type q4_0:  281 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V2
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 4096
+llm_load_print_meta: n_embd           = 5120
+llm_load_print_meta: n_head           = 40
+llm_load_print_meta: n_head_kv        = 40
+llm_load_print_meta: n_layer          = 40
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 5120
+llm_load_print_meta: n_embd_v_gqa     = 5120
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 13824
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 4096
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 13B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 13.02 B
+llm_load_print_meta: model size       = 6.86 GiB (4.53 BPW)
+llm_load_print_meta: general.name     = LLaMA v2
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size =    0.14 MiB
+llm_load_tensors: offloading 40 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 41/41 layers to GPU
+llm_load_tensors:        CPU buffer size =  7023.90 MiB
+...................................................................................................
+llama_new_context_with_model: n_ctx      = 5000
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:        CPU KV buffer size =  3906.25 MiB
+llama_new_context_with_model: KV self size  = 3906.25 MiB, K (f16): 1953.12 MiB, V (f16): 1953.12 MiB
+llama_new_context_with_model: graph splits (measure): 1
+llama_new_context_with_model:        CPU compute buffer size =   430.39 MiB
+AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 0 | VSX = 0 |
+Dagegen haftet er nicht für die Richtigkeit der durch den 
+Bauherrn bekanntgegebenen Anforderungen, Gegebenheiten und Annahmen.
+6 232
+ Arbeiten von Subunternehmern, Regiearbeiten und Arbeiten mit vorgeschriebenen Baustoffen
+
+ Art. 168
+
+ Für Arbeiten seiner Subunternehmer haftet der Unternehmer gemäss Art. 29 Abs. 2 und 5. Bezüg-
+lich der Haftung für Regiearbeiten gilt Art. 57. Für Arbeiten mit vorgeschriebenen Baustoffen gilt
+Art. 136 Abs. 2.
+6 24
+ Rechte des Bauherrn bei Mängeln (Mängelrechte)
+6 241
+ Recht auf Verbesserung, Minderung und Rücktritt
+
+ Art. 169
+
+1 Bei jedem Mangel hat der Bauherr (abgesehen vom Schadenersatzrecht nach Art. 171) zunächst
+einzig das Recht, vom Unternehmer die Beseitigung des Mangels innerhalb angemessener Frist
+zu erlangen (Recht auf Verbesserung, Art. 160, Art. 161 Abs. 2, Art. 162, Art. 174 Abs. 2, Art. 179
+Abs. 2). Soweit der Unternehmer Mängel innerhalb der vom Bauherrn angesetzten Frist nicht
+ behebt, ist der Bauherr berechtigt, nach seiner Wahl:
+
+ 1.  Entweder weiterhin auf der Verbesserung zu beharren; dies jedoch nur dann, wenn die Verbes-
+serung im Verhältnis zu seinem Interesse an der Mängelbeseitigung nicht übermässige Kosten
+verursacht (Art. 368 Abs. 2 OR). Der Bauherr kann die Verbesserung statt durch den Unterneh-
+mer auch durch einen Dritten ausführen lassen oder sie selbst vornehmen, beides auf Kosten
+des Unternehmers (Art. 170),
+
+ 2.  oder einen dem Minderwert des Werkes entsprechenden Abzug von der Vergütung zu machen
+(Minderung, Art. 368 Abs. 2 OR). Hat der Bauherr (oder eine Hilfsperson des Bauherrn) den
+ Mangel mitverschuldet, so ist der Abzug entsprechend zu verringern,
+
+ 3.  oder vom Vertrag zurückzutreten; dies jedoch nur dann, wenn die Entfernung des Werkes nicht
+mit unverhältnismässigen Nachteilen für den Unternehmer verbunden ist und die Annahme dem
+Bauherrn nicht zugemutet werden kann (Art. 368 Abs. 1 und 3 OR). Mit dem Rücktritt wird der
+Bauherr von der Pflicht zur Leistung einer Vergütung befreit; bereits bezahlte Vergütungen kann
+er zurückfordern. Das Werk steht dem Unternehmer zur Verfügung; es kann vom Bauherrn aus
+dem Grundstück entfernt werden, und zwar auf Kosten des Unternehmers, wenn dieser die Ent-
+fernung nicht innerhalb einer angemessenen Frist selbst vornimmt.
+Workingcopy for AEC Hackathon - Zurich Edition
+45
+SIA 118, Copyright © 2013 by SIA Zurich
+
+2 Hat sich der Unternehmer geweigert, eine Verbesserung vorzunehmen, oder ist er hierzu offen-
+sichtlich nicht imstande, so stehen dem Bauherrn die Mängelrechte gemäss Abs. 1 Ziff. 1–3 schon
+vor Ablauf der Verbesserungsfrist zu.
+6 242
+ Kosten der Verbesserung
+
+ Art. 170
+
+1 Die Kosten einer Verbesserung (Art. 169) trägt der Unternehmer; eingeschlossen sind die Kosten
+zur Beseitigung aller Schäden, die an anderen Arbeiten wegen der Mängelbeseitigung entstehen,
+sowie allfällige Mehrkosten der Bauleitung.
+
+2 Kosten, die dem Bauherrn auch bei ursprünglich mängelfreier Ausführung entstanden wären, trägt
+der Bauherr.
+
+3 Hat der Bauherr (oder eine Hilfsperson des Bauherrn) einen Mangel mitverschuldet, so sind die
+Verbesserungskosten zwischen Unternehmer und Bauherrn angemessen zu verteilen.
+
+llama_print_timings:        load time =   44698.51 ms
+llama_print_timings:      sample time =       6.64 ms /    41 runs   (    0.16 ms per token,  6170.98 tokens per second)
+llama_print_timings: prompt eval time =  113928.25 ms /  1131 tokens (  100.73 ms per token,     9.93 tokens per second)
+llama_print_timings:        eval time =    9998.65 ms /    40 runs   (  249.97 ms per token,     4.00 tokens per second)
+llama_print_timings:       total time =  124012.61 ms /  1171 tokens
+
+
+Hint: The text mentions "Mängelrechte" which translates to "defect rights". Therefore, the answer should be related to defects or quality issues in construction projects.       
+PS C:\Users\LouisTrümpler\Documents\GitHub> & C:/Users/LouisTrümpler/AppData/Local/Programs/Python/Python310/python.exe c:/Users/LouisTrümpler/Documents/GitHub/LlamaIndex_RAG/RAG.py
+llama_model_loader: loaded meta data with 19 key-value pairs and 363 tensors from C:\Program Files\LlamaIndexModels\llama-2-13b-chat.Q4_0.gguf (version GGUF V2)
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 5120
+llama_model_loader: - kv   4:                          llama.block_count u32              = 40
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 13824
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 40
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 40
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 2
+llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  12:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  13:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  15:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  16:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  17:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  18:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   81 tensors
+llama_model_loader: - type q4_0:  281 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V2
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 4096
+llm_load_print_meta: n_embd           = 5120
+llm_load_print_meta: n_head           = 40
+llm_load_print_meta: n_head_kv        = 40
+llm_load_print_meta: n_layer          = 40
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 5120
+llm_load_print_meta: n_embd_v_gqa     = 5120
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 13824
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 4096
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 13B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 13.02 B
+llm_load_print_meta: model size       = 6.86 GiB (4.53 BPW)
+llm_load_print_meta: general.name     = LLaMA v2
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size =    0.14 MiB
+llm_load_tensors: offloading 40 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 41/41 layers to GPU
+llm_load_tensors:        CPU buffer size =  7023.90 MiB
+...................................................................................................
+llama_new_context_with_model: n_ctx      = 5000
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:        CPU KV buffer size =  3906.25 MiB
+llama_new_context_with_model: KV self size  = 3906.25 MiB, K (f16): 1953.12 MiB, V (f16): 1953.12 MiB
+llama_new_context_with_model: graph splits (measure): 1
+llama_new_context_with_model:        CPU compute buffer size =   430.39 MiB
+AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 0 | VSX = 0 |
+530 ff. OR.
+
+3 Die Gesellschafter haften für die Erfüllung des Werkvertrages solidarisch. Sie bezeichnen einen der
+Gesellschafter, der dem Bauherrn genehm ist, als federführend; dieser vertritt die Arbeitsgemein-
+schaft rechtsverbindlich gegenüber dem Bauherrn.
+1 42
+ Subunternehmer
+
+ Art. 29
+
+1 Subunternehmer ist, wer auf Grund eines Werkvertrages mit dem Unternehmer einzelne oder alle
+der von diesem übernommenen Arbeiten auszuführen hat.
+
+2 Der Subunternehmer steht hinsichtlich dieser Arbeiten nur zum Unternehmer in einem Vertrags-
+verhältnis. Seine Beiziehung ist auf den Verkehr zwischen Bauherrn und Unternehmer ohne  Einfluss.
+Gegenüber dem Bauherrn hat der Unternehmer für die Arbeit des Subunternehmers wie für seine
+eigene einzustehen; vorbehalten bleibt Abs. 5.
+
+3 Der Unternehmer darf einen Subunternehmer dann beiziehen, wenn der Werkvertrag dies allge-
+mein oder für eine bestimmte Arbeit vorsieht. Soweit der Vertrag eine Beiziehung nicht vorsieht,
+bedarf sie der ausdrücklichen Erlaubnis des Bauherrn; keiner Erlaubnis bedarf die Beiziehung, wenn
+sie nur einen unwesentlichen Teil der Arbeiten betrifft und die vertragsgemässe Ausführung nicht
+beeinträchtigt.
+
+4 Der Unternehmer übernimmt in seinen Vertrag mit dem Subunternehmer alle Bestimmungen
+ seines Werkvertrages mit dem Bauherrn, die zur Wahrung der Interessen des Bauherrn erforder-
+lich sind.
+
+5 Verlangt der Bauherr, dass der Unternehmer einen bestimmten Subunternehmer beiziehe, so
+ bezeichnet er diesen in den ursprünglichen oder gemeinsam abgeänderten (Art. 21 Abs. 2) Aus-
+schreibungsunterlagen. Der Bauherr trägt die Folgen, falls der Subunternehmer die Arbeit mangel-
+haft ausführt und der Unternehmer nachweist, dass er den Subunternehmer richtig eingesetzt und
+gehörig beaufsichtigt hat.
+1 43
+ Nebenunternehmer
+1 431
+ Im Allgemeinen
+
+ Art. 30
+
+1 Nebenunternehmer ist, wer auf Grund eines eigenen Werkvertrages mit dem Bauherrn für das
+ gleiche Bauwerk eine Arbeit auszuführen hat.
+Workingcopy for AEC Hackathon - Zurich Edition
+15
+SIA 118, Copyright © 2013 by SIA Zurich
+
+2 Der Bauherr sorgt durch entsprechende Gestaltung der einzelnen Werkverträge dafür, dass die
+ Arbeiten der verschiedenen Unternehmer zweckmässig miteinander koordiniert sind; er auferlegt
+den Unternehmern in den Verträgen die entsprechenden Verpflichtungen und macht ihnen in der
+Ausschreibung die für die Koordination erforderlichen Angaben. Für die Koordination während
+der Durchführung des Bauvorhabens gilt Art. 34 Abs. 3.
+
+3 Der Unternehmer nimmt auf Nebenunternehmer gebührend Rücksicht und befolgt die entspre-
+chenden Weisungen der Bauleitung.
+
+4 Der Unternehmer unterrichtet die Bauleitung zuhanden eines Nebenunternehmers, der an seine
+Arbeit anschliesst, über Besonderheiten seiner Arbeit, die der Nebenunternehmer nicht kennen
+kann, aber zur richtigen Ausführung der eigenen Arbeit kennen muss. Für die Form der Anzeige
+gilt Art. 25 Abs. 2.
+
+5 Erkennt der Unternehmer Mängel oder Verzögerungen bei der Arbeit eines Nebenunternehmers,
+welche Einfluss auf die vertragsgemässe Ausführung der eigenen Arbeit haben können, so macht
+er der Bauleitung rechtzeitig Anzeige; andernfalls hat er die sich für seine Arbeit ergebenden
+Folgen zu tragen. Für die Form der Anzeige gilt Art. 25 Abs. 2.
+1 432
+ Gemeinsame Schadenersatzpflicht
+
+ Art.
+
+llama_print_timings:        load time =   45103.25 ms
+llama_print_timings:      sample time =      37.75 ms /   256 runs   (    0.15 ms per token,  6781.46 tokens per second)
+llama_print_timings: prompt eval time =   98248.86 ms /  1077 tokens (   91.22 ms per token,    10.96 tokens per second)
+llama_print_timings:        eval time =   65566.93 ms /   255 runs   (  257.13 ms per token,     3.89 tokens per second)
+llama_print_timings:       total time =  164377.73 ms /  1332 tokens
+
+
+SIA 118 provides the following information regarding Subunternehmer and Nebenunternehmer:
+
+* Subunternehmer is defined as someone who, on behalf of an entrepreneur, performs individual or all of the works that the entrepreneur has undertaken to perform under a work contract (Art. 29).
+* The subcontractor is only bound to the entrepreneur in a contractual relationship, and their involvement does not affect the traffic between the building owner and the entrepreneur (Art. 29).
+* The entrepreneur may only engage a subcontractor if the work contract provides for it or if the subcontractor is necessary to fulfill the contract (Art. 29).
+* If the building owner requires the entrepreneur to engage a specific subcontractor, the entrepreneur must comply with this request and indicate the designated subcontractor in the original or amended (Art. 21 para. 2) tender documents (Art. 30).
+* The building owner bears the consequences if the subcontractor fails to perform the work properly and the entrepreneur can prove that they correctly employed and supervised the subcont
+PS C:\Users\LouisTrümpler\Documents\GitHub> 
